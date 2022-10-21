@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+.innerWrap{
+    /*補助線*/
+    /*border:4px solid lightblue;*/
+    width:1240px;
+    margin:0 auto;
+    padding:80px 20px 0;/*それぞれの上の隙間*/
+}
+header{
+    /*background:url(../image/kuukan04.png) no-repeat right center/cover;*/
+    
+}
+
+header::after{
+    content:"";
+    /*画面いっぱいに固定配置*/
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:url(../image/kuukan04.png) no-repeat right center/cover;
+    z-index: -1;
+}
+header .innerWrap{
+    height:720px;
+}
+header h1{
+    text-align: center;
+    font-size: 60px;
+    color:#3A7B9B;
+    letter-spacing: .05em;
+    padding: 130px 40px 0px;
+}
+header nav{
+    /*ナビゲーション位置指定*/
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:rgba(255, 255, 255, 0.493);
+    padding: 10px 20px;
+}
+header nav ul{
+    display:flex;/*横並び*/
+    justify-content: space-around;/*均等配置*/
+    /*中央揃え＋余白*/
+    width:1240px;
+    margin:0 auto;
+    padding: 10px 20px;
+    z-index: 100;
+}
+header nav ul li{
+    font-size:20px;
+    font-weight: bold;
+    list-style:none;/*・を消す*/
+}
+header nav ul li a{
+    color:blueviolet;
+    text-decoration: none!important;
+}
+header nav ul li a:hover {
+    color:rgb(218, 117, 99);
+  }
+
+.self-introductionSec{
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.self-introductionSec h2{
+    font-size: 30px;
+}
+.self-introductionSec h1,h2,h3,p{
+    text-align: center;
+     
+    line-height: 1.75;
+    margin-bottom: 40px; 
+}
+.self-introductionSec.photo{
+    width: 600px;
+}
+/*.self-introductionSec.text{
+    width: 600px;
+    text-align: right;
+    color:aquamarine;
+}*/
+.Self_PR{
+    /*background-color:rgba(205, 152, 255, 0.486);*/
+    background-color:rgba(250, 235, 215, 0.39);
+    padding-bottom:50px;
+}
+.Graduation_thesisSec{
+    background-color:rgb(181, 223, 132);
+    padding-bottom:50px;
+}
+.LanguagesANDtoolsSec{
+    /*background-color:rgba(16, 173, 121, 0.246);*/
+    padding-bottom:50px;
+}
+.dateAreaSec{
+    background-color:rgb(250, 235, 215);
+}
+.dateAreaSec h2{
+    font-size: 30px;
+    /*margin-bottom: 100px;*/
+}
+.dateAreaSec.photo{
+    width: 640px;
+    overflow: hidden;
+    position: relative;
+}
+/*.dateAreaSec .title {
+    font-weight: bold;
+    font-size: 18px;
+}*/
+
+/*.dateAreaSec p img{
+    height:180px;
+}*/
+.dateAreaSec.text{
+    font-size: 20px;
+    line-height: 1.78;
+    grid-row: 2/2;
+    grid-column: 2/2;
+    text-align: center;
+    font-size: 16px;
+    width: 600px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.dateAreaSec.photo{
+    margin-bottom: 14px;
+    width:600px;
+    text-align: right;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.dateAreaSec span{
+    /*textとphotoを横並び*/
+    display: flex;
+    /*間を開ける*/
+    justify-content: space-between;
+}
+/*.dateAreaSec p{
+    text-align: left;
+}*/
+/*.dateAreaSec.right{
+    text-align: center;
+    vertical-align: middle;
+}*/
+.Self_PR p{
+    text-align: left;
+}
+.under {
+    /*background:url(https://saruwakakun.com/wp-content/uploads/2017/02/wave.png) bottom repeat-x;
+    background-size: 20px;*/
+  }
+/*.slider div{
+    width:300px;
+}*/
+.bx-wrapper{
+    margin: 0 auto;
+    width:600px;
+    height:400px;
+}
+.Insertion img{
+    position:absolute; 
+    top:100px;
+    left:100px;
+}
+.Woven img{
+    position:absolute;
+    top:200px;
+    left:200px; 
+}
+/*main{
+    background-color: rgba(245, 227, 201, 0.582);
+}*/
+
+footer{
+    background-color:#3A7B9B;
+    color:aliceblue;
+    padding:14px 10px 3px;
+    text-align: center;
+}
+.text{
+    font-size:25px;
+    color:#3A7B9B;
+}
+.btn--orange,
+a.btn--orange {
+  text-decoration: none;
+  color: #fff;
+  background-color: #eb6100;
+  padding:20px;
+  font-weight:bold;
+}
+a.btn--orange:hover {
+    text-decoration: underline;
+}
+
+.btn--orange,
+a.btn--blue {
+  text-decoration: none;
+  color: #fff;
+  background-color: #023980;
+  padding:20px;
+  font-weight:bold;
+}
+a.btn--blue:hover {
+    text-decoration: underline;
+}
+
+/*.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+  
+}*/
+
+a.btn--radius {
+   border-radius: 100vh;
+   
+}
+a{
+    margin:10px;
+}
+/*.right h2{
+    text-align: left;
+}*/
+.right{
+    vertical-align: middle;
+}
