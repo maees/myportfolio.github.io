@@ -1,174 +1,213 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="portfolio3.css">
-    <title>portfolio</title>
-  </head>
-  <body>
-    <header>
-      <div class="innerWrap">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/portfolio3.css">
+  <title>portfolio</title>
+</head>
+
+<body>
+  <header>
+    <div class="innerWrap">
       <nav>
         <ul>
           <li><a href="#self-introduction">自己紹介</a></li>
-          <li><a href="#dateArea">作品</a></li>
+          <li><a href="#dateArea">参加イベント・作品紹介</a></li>
           <li><a href="#LanguagesANDtools">使用言語・ツール</a></li>
           <li><a href="#Graduation_thesis">卒業研究テーマ</a></li>
           <li><a href="#Self_PR">自己PR</a></li>
         </ul>
       </nav>
       <h1>portfolio</h1>
+    </div>
+    <p>
+    </p>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.slider').bxSlider({
+          auto: true,
+          pause: 5000,
+        });
+      });
+    </script>
+  </header>
+  <main>
+    <section class="self-introductionSec" id="self-introduction">
+      <div class="innerWrap">
+        <h2>自己紹介</h2>
+        <p>前納聖菜(Maeno Seina)</p>
+        <span>
+          <!--<p class="photo"><img src="image/animal_harinezumi.png" alt="紹介画像">-->
+          <p class="texts">九州産業大学　理工学部・情報科学科在籍中<br>
+            <!--大学2年生でOpen HackU 2021に参加し<br>
+              メンタルヘルスが目的のゲーム｢RPGP｣を開発。<br>
+              その後メンタルヘルスのための日記アプ<br>
+              リケーション開発に取り組む。研究室では、<br>
+              webシステム開発に移行し、フードバンク日<br>
+              向の活動を支援するwebシステム開発に取り<br>
+              組んでいる.-->
+          </p>
+        </span>
+        <h3>資格</h3>
+        <p>茶道検定取得(2019/6)&nbsp;&nbsp;
+          ユニバーサルマナー検定取得(2020/11)</p>
       </div>
-      <p>
-        <!--<img src="image/kumo37.png" alt="背景イラスト" >-->
-      </p>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    </section>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.slider').bxSlider({
-                    auto: true,
-                    pause: 5000,
-                });
-            });
-        </script>
-    </header>
-    <main>
-        <section class="self-introductionSec" id="self-introduction">
-          <div class="innerWrap">
-            <h2>自己紹介</h2>
-            <p>前納聖菜(Maeno Seina)</p>
-            <span>
-            <!--<p class="photo"><img src="image/animal_harinezumi.png" alt="紹介画像">-->
-            <p class="texts">九州産業大学　理工学部・情報科学科在籍中<br>
-       
-            </p>
-            </span>
-            <h3>資格</h3>
-            <p>茶道検定取得(2019/6)&nbsp;&nbsp;
-            ユニバーサルマナー検定取得(2020/11)</p>
-          </div>
-        </section>
+    <section class="dateAreaSec" id="dateArea">
+      <div class="innerWrap">
+        <h2>作品・参加イベント紹介</h2>
+        <span>
+          <p class="photo">
+            <!--<img src="image/Main.png" alt="日記アプリ画像">
+                <video src="../myport/684924781_0.520289.mp4" controls></video>-->
+            <video src="../myport/684924781_0.520289.mp4" loop autoplay muted></video>
 
-        <section class="dateAreaSec" id="dateArea">
-          <div class="innerWrap">
-            <h2>作品紹介</h2>
-            <span>
-            <p class="photo">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/Main.png?raw=true" alt="日記アプリ画像">
-                <!--<video src="../myport/684924781_0.520289.mp4" controls></video>
-                <video src="../myport/684924781_0.520289.mp4" loop autoplay muted></video>-->
+          </p>
+          <div class="right">
+            <!--<h3>論文発表</h3>-->
 
-            </p>
-            <div class="right">
-           <!--<h3>論文発表</h3>-->
-            
-            <h2>2022年度<br></br>電気・情報関係学会九州支部連合大会(第75回)</h2>
-            <h2>日本デザイン学会第5支部研究発表会</h2>
+            <h2>2022年度(第75回)<br></br>電気・情報関係学会九州支部連合大会</h2>
             <h3 class="text">｢メンタルヘルスを目的とした日記アプリケーションの開発｣</h3>
-              
             <p>
-            <a href="johoshori.pdf" class="btn btn--orange btn--radius">投稿論文</a>
-            <a href="johoshorislide.pdf" class="btn btn--orange btn--radius">発表スライド</a>
+              <a href="../myport/johoshori.pdf" class="btn btn--orange btn--radius">投稿論文</a>
+              <a href="../myport/johoshorislide.pdf" class="btn btn--orange btn--radius">発表スライド</a>
             </p>
           </div>
-            </span>
-            </div>
+        </span>
+      </div>
 
-            <div class="innerWrap">
-            <span>
-              <div class="right">
+      <div class="innerWrap">
+        <span>
+          <div class="right">
             <h2>Open Hack U 2021</h2>
             <h3 class="text">｢Look Mind｣</h3>
             <h3 class="text">～メンタルヘルスのためのゲーム開発～</h3>
-            
+
             <p>YouTube発表動画:<br>
               Open Hack U 2021 Online Vol.1 プレゼンテーション・作品展示会・表彰式（全編）</p>
-              <p><a href="RPGgsmeSlide.pdf" class="btn btn--blue btn--radius">発表スライド</a></p>
-            
-          </div>
-            <p>
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/RPGP.png?raw=true" alt="RPG画像">
-            </p>
-          </div>
-          </span>
-          <span>
-            <div class="innerWrap">
-            <h3>趣味で作ったメンタルヘルスを目的としたミニゲーム</h3>
-            <!--<p>
-                <img src="image/baloonCut.png" alt="ミニゲーム画像" width="500px">
-            </p>-->
-            <div class="slider">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/baloonCut.png?raw=true" width="100px" height="400px" alt="baloonCut">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/penguinf.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/karada.png?raw=true" width="100px" height="400px" alt="43"> 
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/penguins.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/kokoroiro2.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/kokoroiro.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/foot.png?raw=true" width="50px" height="400px" alt="43"
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/dashutuF.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/bareer.png?raw=true" width="100px" height="400px" alt="43">
-                <img src="https://github.com/maees/myportfolio.github.io/blob/main/bot.png?raw=true" width="100px" height="400px" alt="43">
-            </div>
-              <p><a href="https://unityroom.com/games/ashimotonokokoro">足下のこころ</a></p>
-          </div>
-          </span>
-          
-        </section>
+            <p><a href="../myport/RPGgsmeSlide.pdf" class="btn btn--blue btn--radius">発表スライド</a></p>
 
-        <section class="LanguagesANDtoolsSec" id="LanguagesANDtools">
-          <div class="innerWrap">
-            <h2>使用言語・ツール</h2>
-            <p>Java: 3年</p>
-            <p>Unity C#: 1年6ヶ月</p>
-            <p>VSCode HTML,CSS,PHP,JavaScript: 2ヶ月</p>
           </div>
-        </section>
+          <p>
+            <img src="image/RPGP.png" alt="RGP画像">
+          </p>
+      </div>
+      </span>
+      <div class="innerWrap">
+        <span>
+          <p class="photo">
+          <p>
+            <img src="image/S__51904519.jpeg" alt="マルシェ" class="marcheImgAll">
+          </p>
+          </p>
+          <div class="right">
 
-        <section class="Graduation_thesisSec" id="Graduation_thesis">
-          <div class="innerWrap">
-            <h2>卒業研究テーマ</h2>
-              <h3>｢　フードバンク利用者の情報や頂いたご意見を、スタッフや行政間で共有できるようにするwebシステム開発　｣</h3>
-          </div>
-        </section>
+            <h2>2022年4月<br></h2>
+            <h2>筑紫女学園大学×九州産業大学 マルシェ</h2>
+            <h3 class="text">「こころいろ」</h3>
+            <h3 class="text">子供向け、気持ちを色で表現する体験企画・提案</h3>
+            <ul>
+              <li>色彩心理を利用したパズルに色塗り体験</li>
+              <li>気持ちを考えるオリジナルの紙芝居読み聞かせ</li>
+              <li>保護者・子供向けの説明用パンフレット</li>
+            </ul>
 
-        <section class="Self_PR"Sec" id="Self_PR">
-          <div class="innerWrap">
-            <h2>自己PR</h2>
-            <p>私の強みは継続力です。やると決めたことを最後まで必ずコツコツと取り組みます。私は1年半に渡って、
-               芸術学部の学生とチームを組んで、メンタルヘルスのための日記アプリケーション開発を行っています。
-               開発はUnityを使用していますが、初めは全く扱い方が分からず行き詰まってばかりでした。また、開発
-               メンバーとの作業予定を合わせにくいこともあり、中々開発が進まずに気持ちが落ち込む時期もありました。
-               しかし簡単なことから一つずつトライアンドエラーを繰り返し、諦めずに開発し続けたことで、今秋には開発
-               した成果を研究会で発表しました。コンセプトは社会貢献性が高く面白い、興味があるといった評価を頂き、
-               これまでの努力について認めて貰えたと感じました。今では、Unityを用いたアプリケーション開発の知識も
-               増えて来て、日記アプリケーション以外にも色々なアプリを作れるようになり、自身の成長を実感しています。
-               継続して努力し、さまざまな知識を身に付けて応用していけるのが自分の強みだと思っています。この強みを
-               生かして常に良いものを作り続けていきたいと思います。</p>
           </div>
-        </section>
-    </main>
-    <aside>
-      
-    </aside>
-    <footer>
-      <p>© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-maees/myportfolio.github.iomyportfolio.github.io/index.html at main · maees/myportfolio.github.io</p>
-    </footer>
-  </body>
+        </span>
+      </div>
+      <span>
+        <div class="innerWrap">
+          <h2>メンタルヘルスを目的としたミニゲーム</h2>
+          <p><a href="https://unityroom.com/games/ashimotonokokoro" alt="足下のこころ"></a></p>
+          <div class="slider">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/baloonCut.png?raw=true" width="100px"
+              height="400px" alt="baloonCut">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/penguinf.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/karada.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/penguins.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/kokoroiro2.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/kokoroiro.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/foot.png?raw=true" width="50px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/dashutuF.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/bareer.png?raw=true" width="100px"
+              height="400px" alt="43">
+            <img src="https://github.com/maees/myportfolio.github.io/blob/main/bot.png?raw=true" width="100px"
+              height="400px" alt="43">
+          </div>
+          <p><a href="https://unityroom.com/games/ashimotonokokoro">足下のこころ</a></p>
+        </div>
+
+      </span>
+    </section>
+
+    <section class="LanguagesANDtoolsSec" id="LanguagesANDtools">
+      <div class="innerWrap">
+        <h2>使用言語・ツール</h2>
+        <p>Java: 3年</p>
+        <p>Unity C#: 1年6ヶ月</p>
+        <p>VSCode HTML,CSS,PHP,JavaScript: 2ヶ月</p>
+      </div>
+    </section>
+
+    <section class="Graduation_thesisSec" id="Graduation_thesis">
+      <div class="innerWrap">
+        <h2>卒業研究テーマ</h2>
+        <h3>｢　フードバンク日向が支援している貧困の方の情報やご意見をスタッフや行政間で共有できるようにするwebシステム開発　｣</h3>
+      </div>
+    </section>
+
+    <section class="Self_PR" id="Self_PR">
+      <div class="innerWrap">
+        <h2>自己PR</h2>
+        <p>
+          私の強みは継続力です。やると決めたことを最後まで必ずコツコツと取り組みます。私は1年半に渡って、
+          芸術学部の学生とチームを組んで、メンタルヘルスのための日記アプリケーション開発を行っています。
+          開発はUnityを使用していますが、初めは扱い方が分からず行き詰まってばかりでした。また、開発メ
+          ンバーとの作業予定を合わせにくいこともあり、開発が進まずに気持ちが落ち込む時期もありました。
+          しかし簡単なことから一つずつトライアンドエラーを繰り返し諦めずに開発し続けたことで、今秋には
+          開発した成果を研究会で発表することができました。コンセプトは社会貢献性が高く面白い、興味があ
+          るといった評価を頂き、これまでの努力について認めて貰えたと感じています。今ではUnityを用いた
+          アプリケーション開発の知識も増えて来て、日記アプリケーション以外にも色々なアプリを作れるよう
+          になり、自身の成長を実感しています。継続して努力し、さまざまな知識を身に付けて応用していける
+          のが自分の強みだと思っています。この強みを生かして常に良いものを作り続けていきたいと思います。
+        </p>
+      </div>
+    </section>
+  </main>
+  <aside>
+
+  </aside>
+  <footer>
+    <!--<p>© 2022 portphorio</p>-->
+    <p>© 2022 GitHub, Inc.
+      Footer navigation
+      Terms
+      Privacy
+      Security
+      Status
+      Docs
+      Contact GitHub
+      Pricing
+      API
+      Training
+      Blog
+      About
+      maees/myportfolio.github.iomyportfolio.github.io/index.html at main · maees/myportfolio.github.io</p>
+  </footer>
+</body>
+
 </html>
-
+<!--http://localhost/myport/scrollSec.html-->
