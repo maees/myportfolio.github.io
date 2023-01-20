@@ -110,6 +110,10 @@ header nav ul li a:hover {
     overflow: hidden;
     position: relative;
 }
+.dateAreaSec a{
+    margin:100px;
+    font-size: 30px;
+}
 /*.dateAreaSec .title {
     font-weight: bold;
     font-size: 18px;
