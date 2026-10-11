@@ -1,242 +1,84 @@
 @charset "utf-8";
-
-.innerWrap{
-    /*補助線*/
-    /*border:4px solid lightblue;*/
-    width:1240px;
-    margin:0 auto;
-    padding:80px 20px 0;/*それぞれの上の隙間*/
+:root { color-scheme: light; --ink:#253b42; --muted:#5d6e74; --accent:#245f60; --paper:#fbfaf7; --line:#dce3df; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:2rem; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; font-size:16px; line-height:1.9; }
+a { color:var(--accent); text-underline-offset:.25em; }
+a:hover { text-decoration:underline; }
+a:focus-visible, summary:focus-visible { outline:3px solid #986233; outline-offset:5px; }
+.container { width:min(1120px,calc(100% - 64px)); margin-inline:auto; }
+.skip-link { position:absolute; top:-100px; left:20px; padding:12px; background:white; z-index:2; }
+.skip-link:focus { top:10px; }
+header { background:linear-gradient(90deg,rgba(251,250,247,.96),rgba(251,250,247,.65)),url("kuukan04.png") center/cover; border-bottom:1px solid var(--line); }
+nav { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-block:28px; }
+.brand { font-size:14px; font-weight:700; letter-spacing:.12em; text-decoration:none; }
+nav ul { display:flex; flex-wrap:wrap; gap:24px; padding:0; margin:0; list-style:none; }
+nav a { font-size:14px; text-decoration:none; }
+.hero { padding-block:85px 100px; }
+.eyebrow { margin:0 0 16px; color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.14em; }
+h1,h2,h3,h4 { line-height:1.5; margin:0 0 20px; overflow-wrap:anywhere; }
+h1 { font-size:clamp(36px,5.6vw,66px); letter-spacing:.04em; }
+h2 { font-size:clamp(24px,3vw,32px); }
+h3 { font-size:25px; }
+h4 { font-size:22px; }
+p { margin:0 0 20px; }
+.hero-description { font-size:18px; margin-top:24px; }
+.hero-name { margin-block:32px; font-weight:700; }
+.hero-name span { color:var(--muted); margin-left:16px; font-size:14px; font-weight:400; }
+.button { display:inline-flex; align-items:center; justify-content:center; gap:28px; padding:12px 22px; border:1px solid var(--accent); border-radius:8px; background:var(--accent); color:white; font-size:14px; font-weight:600; text-decoration:none; }
+.secondary { color:var(--accent); background:transparent; }
+section { padding-block:72px; border-bottom:1px solid var(--line); }
+.intro { display:grid; grid-template-columns:1fr 1.7fr; gap:60px; }
+.intro p:last-child { margin-bottom:0; }
+.section-heading { margin-bottom:36px; }
+.section-heading p:last-child { margin-bottom:0; }
+.award-card { background:#edf3ee; padding:40px; border-radius:16px; border:1px solid #d0ded4; }
+.tag { display:inline-block; font-size:13px; font-weight:700; color:#365849; margin-bottom:24px; }
+.lead { font-size:18px; font-weight:600; }
+dl { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0; }
+dt { color:var(--muted); font-size:13px; } dd { margin:0; }
+.text-link { font-weight:600; font-size:14px; }
+.project { display:grid; grid-template-columns:1fr 1.15fr; gap:48px; padding-block:44px; border-bottom:1px solid var(--line); align-items:center; }
+.project-media { background:#f1efe7; border-radius:14px; padding:24px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.project-media img { display:block; width:100%; height:auto; max-height:430px; object-fit:contain; }
+.diary-media { gap:16px; }
+.diary-media img { width:calc(50% - 8px); }
+.marche-media { aspect-ratio:4/3; padding:0; }
+.marche-media img { width:75%; max-height:none; transform:rotate(-90deg); }
+ul { padding-left:1.4em; }
+.links { display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
+.mini-heading { margin-top:48px; }
+.game-links { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.game-links article { padding:28px; border:1px solid var(--line); border-radius:12px; background:white; }
+.gallery-details { margin-top:28px; }
+summary { cursor:pointer; color:var(--accent); padding:12px 0; font-weight:600; }
+.gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.gallery img { width:100%; height:220px; object-fit:contain; background:#f1efe7; border-radius:8px; }
+.timeline { margin:0; padding:0; list-style:none; }
+.timeline li { border-left:2px solid #b2cbb9; padding:0 0 32px 28px; }
+.timeline li:last-child { padding-bottom:0; }
+.timeline h3 { font-size:21px; }
+.muted { color:var(--muted); font-size:14px; }
+.chips { display:flex; flex-wrap:wrap; gap:10px; list-style:none; padding:0; margin:24px 0 0; }
+.chips li { padding:5px 14px; background:#eef1ed; border-radius:6px; font-size:14px; }
+.reflection { max-width:780px; margin-inline:auto; border:0; padding-block:85px; }
+footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-block:28px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+footer p { margin:0; }
+@media (max-width:760px) {
+  .container { width:calc(100% - 40px); }
+  nav { align-items:flex-start; flex-direction:column; gap:16px; padding-block:20px; }
+  nav ul { gap:16px; }
+  .hero { padding-block:52px 64px; }
+  .hero-description { font-size:16px; }
+  .desktop-break { display:none; }
+  section { padding-block:48px; }
+  .intro,.project { grid-template-columns:1fr; gap:24px; }
+  .award-card { padding:26px; }
+  dl,.game-links { grid-template-columns:1fr; }
+  .project { padding-block:32px; }
+  .project-media { padding:18px; }
+  .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .gallery img { height:160px; }
+  .reflection { padding-block:56px; }
 }
-/*header{
-    background:url(../image/kuukan04.png) no-repeat right center/cover;
-}*/
-
-header::after{
-    content:"";
-    /*画面いっぱいに固定配置*/
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:url(https://github.com/maees/myportfolio.github.io/blob/main/kuukan04.png?raw=true) no-repeat right center/cover;
-    z-index: -1;
-}
-header .innerWrap{
-    height:720px;
-}
-header h1{
-    text-align: center;
-    font-size: 60px;
-    color:#3A7B9B;
-    letter-spacing: .05em;
-    padding: 130px 40px 0px;
-}
-header nav{
-    /*ナビゲーション位置指定*/
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background-color:rgba(255, 255, 255, 0.493);
-    padding: 10px 20px;
-}
-header nav ul{
-    display:flex;/*横並び*/
-    justify-content: space-around;/*均等配置*/
-    /*中央揃え＋余白*/
-    width:1240px;
-    margin:0 auto;
-    padding: 10px 20px;
-    z-index: 100;
-}
-header nav ul li{
-    font-size:20px;
-    font-weight: bold;
-    list-style:none;/*・を消す*/
-}
-header nav ul li a{
-    color:blueviolet;
-    text-decoration: none!important;
-}
-header nav ul li a:hover {
-    color:rgb(218, 117, 99);
-  }
-
-.self-introductionSec{
-    background-color: rgba(255, 255, 255, 0);
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-.self-introductionSec h2{
-    font-size: 30px;
-}
-.self-introductionSec h1,h2,h3,p{
-    text-align: center;
-     
-    line-height: 1.75;
-    margin-bottom: 40px; 
-}
-.self-introductionSec.photo{
-    width: 600px;
-}
-/*.self-introductionSec.text{
-    width: 600px;
-    text-align: right;
-    color:aquamarine;
-}*/
-.Self_PR{
-    /*background-color:rgba(205, 152, 255, 0.486);*/
-    background-color:rgba(250, 235, 215, 0.39);
-    padding-bottom:50px;
-}
-.Graduation_thesisSec{
-    background-color:rgb(181, 223, 132);
-    padding-bottom:50px;
-}
-.LanguagesANDtoolsSec{
-    /*background-color:rgba(16, 173, 121, 0.246);*/
-    padding-bottom:50px;
-}
-.dateAreaSec{
-    background-color:rgb(250, 235, 215);
-}
-.dateAreaSec h2{
-    font-size: 30px;
-    /*margin-bottom: 100px;*/
-}
-.dateAreaSec.photo{
-    width: 640px;
-    overflow: hidden;
-    position: relative;
-}
-.dateAreaSec a{
-    margin:100px;
-    font-size: 23px;
-}
-/*.dateAreaSec .title {
-    font-weight: bold;
-    font-size: 18px;
-}*/
-
-/*.dateAreaSec p img{
-    height:180px;
-}*/
-.dateAreaSec.text{
-    font-size: 20px;
-    line-height: 1.78;
-    grid-row: 2/2;
-    grid-column: 2/2;
-    text-align: center;
-    font-size: 16px;
-    width: 600px;
-    vertical-align: middle;
-    display: inline-block;
-}
-.dateAreaSec.photo{
-    margin-bottom: 14px;
-    width:600px;
-    text-align: right;
-    grid-row: 1/2;
-    grid-column: 1/2;
-}
-.dateAreaSec span{
-    /*textとphotoを横並び*/
-    display: flex;
-    /*間を開ける*/
-    justify-content: space-between;
-}
-/*.dateAreaSec p{
-    text-align: left;
-}*/
-/*.dateAreaSec.right{
-    text-align: center;
-    vertical-align: middle;
-}*/
-.Self_PR p{
-    text-align: left;
-}
-/*.under {
-    background:url(https://saruwakakun.com/wp-content/uploads/2017/02/wave.png) bottom repeat-x;
-    background-size: 20px;
-}*/
-/*.slider div{
-    width:300px;
-}*/
-.bx-wrapper{
-    margin: 0 auto;
-    width:600px;
-    height:400px;
-}
-.Insertion img{
-    position:absolute; 
-    top:100px;
-    left:100px;
-}
-.Woven img{
-    position:absolute;
-    top:200px;
-    left:200px; 
-}
-/*main{
-    background-color: rgba(245, 227, 201, 0.582);
-}*/
-
-footer{
-    background-color:#3A7B9B;
-    color:aliceblue;
-    padding:14px 10px 3px;
-    text-align: center;
-}
-.text{
-    font-size:25px;
-    color:#3A7B9B;
-}
-.btn--orange,
-a.btn--orange {
-  text-decoration: none;
-  color: #fff;
-  background-color: #eb6100;
-  padding:20px;
-  font-weight:bold;
-}
-a.btn--orange:hover {
-    text-decoration: underline;
-}
-
-.btn--orange,
-a.btn--blue {
-  text-decoration: none;
-  color: #fff;
-  background-color: #023980;
-  padding:20px;
-  font-weight:bold;
-}
-a.btn--blue:hover {
-    text-decoration: underline;
-}
-
-/*.btn--orange:hover,
-a.btn--orange:hover {
-  color: #fff;
-  background: #f56500;
-  
-}*/
-
-a.btn--radius {
-   border-radius: 100vh;
-   
-}
-a{
-    margin:10px;
-}
-/*.right h2{
-    text-align: left;
-}*/
-.right{
-    vertical-align: middle;
-}
-.marcheImgAll{
-    transform: rotate(-90deg);
-    width: 434px;
-}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
